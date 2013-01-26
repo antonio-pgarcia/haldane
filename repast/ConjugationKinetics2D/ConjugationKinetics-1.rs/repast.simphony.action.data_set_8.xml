@@ -1,0 +1,47 @@
+<repast.simphony.data2.engine.DataSetDescriptor>
+  <name>PopulationCensus</name>
+  <type>AGGREGATE</type>
+  <inclTick>true</inclTick>
+  <inclBatchRun>true</inclBatchRun>
+  <inclRandomSeed>true</inclRandomSeed>
+  <scheduleParams>
+    <start>1.0</start>
+    <interval>2.0</interval>
+    <priority>-Infinity</priority>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+  </scheduleParams>
+  <methodDataSources class="linked-hash-map"/>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map">
+    <entry>
+      <string>Population (D+R+T)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Population (D+R+T)</id>
+        <dsClassName>org.holistic.bactocom.datasources.PopulationAll</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Population (T)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Population (T)</id>
+        <dsClassName>org.holistic.bactocom.datasources.PopulationTransconjugant</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Population (D)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Population (D)</id>
+        <dsClassName>org.holistic.bactocom.datasources.PopulationDonors</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Population (R)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Population (R)</id>
+        <dsClassName>org.holistic.bactocom.datasources.PopulationRecipient</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+  </customAggDataSources>
+</repast.simphony.data2.engine.DataSetDescriptor>

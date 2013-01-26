@@ -1,0 +1,1 @@
+This is the ConjugationKinetics-1 model. Please contact the developers for more information.

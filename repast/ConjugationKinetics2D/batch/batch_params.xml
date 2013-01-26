@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<sweep runs="1">
+	<parameter name="randomSeed" type="list" value_type="int" values="612724946 225850414 433301777 100144213 176909109 320120676"/>
+	<parameter name="width" type="constant" constant_type="number" value="1000"/>
+	<parameter name="height" type="constant" constant_type="number" value="1000"/>
+	<parameter name="plasmidloss" type="constant" constant_type="number" value="0.0001"/>
+	<parameter name="donors" type="constant" constant_type="number" value="5"/>
+	<parameter name="repressed" type="constant" constant_type="boolean" value="true"/>
+	<parameter name="orit" type="constant" constant_type="boolean" value="true"/>
+	<parameter name="CC" type="constant" constant_type="number" value="70.0"/>
+	<parameter name="GT" type="constant" constant_type="number" value="42"/>
+	<parameter name="fixed" type="constant" constant_type="number" value="2.0"/>
+	<parameter name="derepression" type="constant" constant_type="number" value="20.0"/>
+	<parameter name="conjugation" type="constant" constant_type="number" value="5.0"/>
+	<parameter name="nutrient" type="constant" constant_type="number" value="2000.0"/>
+	
+	
+	<!-- Model parameters
+	 
+	<parameter name="donors" type="number"  start="5" end="50" step="5"/>
+	<parameter name="repressed" type="list"  value_type="boolean" values="'true' 'false'"/>
+	<parameter name="orit" type="list"  value_type="boolean" values="'true' 'false'"/>
+	<parameter name="CC" type="number"  start="50.0" end="75.0" step="5.0"/>
+	<parameter name="GT" type="number"  start="40" end="50" step="2"/>
+	<parameter name="fixed" type="number"  start="1.0" end="10.0" step="2.0"/>
+	<parameter name="derepression"  type="number"  start="5.0" end="30.0" step="5.0"/>
+	<parameter name="conjugation"  type="number"  start="5.0" end="15.0" step="5.0"/>
+	<parameter name="nutrient"  type="list"  value_type="double" values="1000.0 1500.0 2000.0"/>
+	
+	 -->
+	
+	
+</sweep>
