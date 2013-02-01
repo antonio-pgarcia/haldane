@@ -30,7 +30,7 @@ public class RCt implements AggregateDataSource {
 	@Override
 	public Object get(Iterable<?> objs, int size) {
 		Context context = (Context) objs.iterator().next();
-		return (double) ModelRatesHelper.getInstance().getRCh(context);
+		return (double) ModelRatesHelper.getInstance().getRCt(context);
 	}
 
 	@Override
