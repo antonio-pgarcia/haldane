@@ -231,6 +231,10 @@ public abstract class AbstractBacterium {
 	 */
 	public void incrementConjugations() {
 		this.conjugations++;
+		if(isDonor()) 
+			MyPopulationBookkeeper.getInstance().incrementCd();
+		else if(isTransconjugant())
+			MyPopulationBookkeeper.getInstance().incrementCt();
 	}
 	
 	/**

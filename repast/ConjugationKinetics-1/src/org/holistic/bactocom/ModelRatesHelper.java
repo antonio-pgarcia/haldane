@@ -9,6 +9,8 @@ public class ModelRatesHelper {
 	private double D= 0;
 	private double R= 0;
 	private double T= 0;
+	private double Cd= 0;
+	private double Ct= 0;
 
 	
 	private final static ModelRatesHelper instance= new ModelRatesHelper();
@@ -32,6 +34,18 @@ public class ModelRatesHelper {
 		double psi= getGrowthRateTransconjugant(context);
 		double g= gammaEndPoint(psi,D+R+T, this.pN0,D,R,T);
 		return g;
+	}
+	
+	public double getRCv(Context context) {
+		return( (T - (Cd + Ct))/T ); 
+	}
+	
+	public double getRCh(Context context) {
+		return( (Cd + Ct)/T ); 
+	}
+	
+	public double getRCt(Context context) {
+		return( Ct/(Cd + Ct) ); 
 	}
 	
 	public double getTransconjugantPerRecipientCell(Context context) {
@@ -128,6 +142,8 @@ public class ModelRatesHelper {
 		D= MyPopulationBookkeeper.getInstance().getD();
 		R= MyPopulationBookkeeper.getInstance().getR();
 		T= MyPopulationBookkeeper.getInstance().getT();
+		Cd= MyPopulationBookkeeper.getInstance().getCd();
+		Ct= MyPopulationBookkeeper.getInstance().getCt();
 	}
 
 }

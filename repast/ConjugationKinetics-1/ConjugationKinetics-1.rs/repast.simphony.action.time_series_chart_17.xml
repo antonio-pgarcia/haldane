@@ -1,9 +1,9 @@
 <repast.simphony.chart2.engine.TimeSeriesChartDescriptor>
-  <name>Plot::GenerationTimes</name>
-  <dataSet>GenerationTimes</dataSet>
+  <name>Plot::PopulationCensus</name>
+  <dataSet>PopulationCensus</dataSet>
   <xAxisLabel>Time (minutes)</xAxisLabel>
-  <yAxisLabel>G</yAxisLabel>
-  <chartTitle>Generation Time</chartTitle>
+  <yAxisLabel>Number of individuals</yAxisLabel>
+  <chartTitle>Bacterial Population</chartTitle>
   <type>TIME_SERIES</type>
   <background>
     <red>192</red>
@@ -20,47 +20,47 @@
   <showGrid>true</showGrid>
   <seriesIds>
     <entry>
-      <string>Generation Time G(T)</string>
+      <string>Population (T)</string>
       <SeriesData>
-        <label>Generation Time G(T)</label>
+        <label>Population (T)</label>
         <color>
-          <red>0</red>
-          <green>168</green>
+          <red>204</red>
+          <green>204</green>
           <blue>0</blue>
           <alpha>255</alpha>
         </color>
       </SeriesData>
     </entry>
     <entry>
-      <string>Generation Time G(D+T+R)</string>
+      <string>Population (R)</string>
       <SeriesData>
-        <label>Generation Time G(D+T+R)</label>
+        <label>Population (R)</label>
         <color>
-          <red>120</red>
-          <green>120</green>
-          <blue>120</blue>
+          <red>51</red>
+          <green>153</green>
+          <blue>0</blue>
           <alpha>255</alpha>
         </color>
       </SeriesData>
     </entry>
     <entry>
-      <string>Generation Time G(D)</string>
+      <string>Population (D+R+T)</string>
       <SeriesData>
-        <label>Generation Time G(D)</label>
+        <label>Population (D+R+T)</label>
         <color>
-          <red>0</red>
-          <green>0</green>
-          <blue>168</blue>
+          <red>204</red>
+          <green>204</green>
+          <blue>204</blue>
           <alpha>255</alpha>
         </color>
       </SeriesData>
     </entry>
     <entry>
-      <string>Generation Time G(R)</string>
+      <string>Population (D)</string>
       <SeriesData>
-        <label>Generation Time G(R)</label>
+        <label>Population (D)</label>
         <color>
-          <red>168</red>
+          <red>204</red>
           <green>0</green>
           <blue>0</blue>
           <alpha>255</alpha>

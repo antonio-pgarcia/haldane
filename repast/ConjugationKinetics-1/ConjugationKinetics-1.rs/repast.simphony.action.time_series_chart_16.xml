@@ -1,9 +1,9 @@
 <repast.simphony.chart2.engine.TimeSeriesChartDescriptor>
-  <name>Plot::ConjugativeEvents</name>
-  <dataSet>ConjugationEvents</dataSet>
-  <xAxisLabel>Time (minutes)</xAxisLabel>
-  <yAxisLabel>Average plasmid trasnfers</yAxisLabel>
-  <chartTitle>Conjugative Events</chartTitle>
+  <name>Plot::Growth Rates</name>
+  <dataSet>Growth Rates</dataSet>
+  <xAxisLabel>Tick Count</xAxisLabel>
+  <yAxisLabel>Rates</yAxisLabel>
+  <chartTitle>Growth rates</chartTitle>
   <type>TIME_SERIES</type>
   <background>
     <red>192</red>
@@ -20,9 +20,21 @@
   <showGrid>true</showGrid>
   <seriesIds>
     <entry>
-      <string>Average T conjugations</string>
+      <string>Recipients growth rate</string>
       <SeriesData>
-        <label>Average T conjugations</label>
+        <label>Recipients growth rate</label>
+        <color>
+          <red>0</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </color>
+      </SeriesData>
+    </entry>
+    <entry>
+      <string>Donors growth rate</string>
+      <SeriesData>
+        <label>Donors growth rate</label>
         <color>
           <red>255</red>
           <green>0</green>
@@ -32,9 +44,21 @@
       </SeriesData>
     </entry>
     <entry>
-      <string>Average D conjugations</string>
+      <string>Transconjugants growth rate</string>
       <SeriesData>
-        <label>Average D conjugations</label>
+        <label>Transconjugants growth rate</label>
+        <color>
+          <red>255</red>
+          <green>0</green>
+          <blue>255</blue>
+          <alpha>255</alpha>
+        </color>
+      </SeriesData>
+    </entry>
+    <entry>
+      <string>Population growth rate</string>
+      <SeriesData>
+        <label>Population growth rate</label>
         <color>
           <red>0</red>
           <green>0</green>
