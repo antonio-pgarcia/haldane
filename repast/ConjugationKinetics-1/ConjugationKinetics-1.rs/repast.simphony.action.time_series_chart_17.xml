@@ -20,18 +20,6 @@
   <showGrid>true</showGrid>
   <seriesIds>
     <entry>
-      <string>Generation Time G(D+T+R)</string>
-      <SeriesData>
-        <label>Generation Time G(D+T+R)</label>
-        <color>
-          <red>120</red>
-          <green>120</green>
-          <blue>120</blue>
-          <alpha>255</alpha>
-        </color>
-      </SeriesData>
-    </entry>
-    <entry>
       <string>Generation Time G(T)</string>
       <SeriesData>
         <label>Generation Time G(T)</label>
@@ -39,6 +27,18 @@
           <red>0</red>
           <green>168</green>
           <blue>0</blue>
+          <alpha>255</alpha>
+        </color>
+      </SeriesData>
+    </entry>
+    <entry>
+      <string>Generation Time G(D+T+R)</string>
+      <SeriesData>
+        <label>Generation Time G(D+T+R)</label>
+        <color>
+          <red>120</red>
+          <green>120</green>
+          <blue>120</blue>
           <alpha>255</alpha>
         </color>
       </SeriesData>
