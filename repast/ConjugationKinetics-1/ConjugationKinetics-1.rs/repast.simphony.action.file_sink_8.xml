@@ -1,0 +1,17 @@
+<repast.simphony.data2.engine.FileSinkDescriptor>
+  <name>Sink:Growth-Rates</name>
+  <dataSet>Growth Rates</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>tick</string>
+    <string>run</string>
+    <string>random_seed</string>
+    <string>Population growth rate</string>
+    <string>Donors growth rate</string>
+    <string>Recipients growth rate</string>
+    <string>Transconjugants growth rate</string>
+  </sourceIds>
+  <fileName>output/M1-GrowthRates.dat</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
