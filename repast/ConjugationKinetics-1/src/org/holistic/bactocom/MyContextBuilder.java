@@ -64,10 +64,10 @@ public class MyContextBuilder implements ContextBuilder<Object> {
 	private void configSimulation() {
 		System.out.println("Initializing/Configuring Simulation (time= " + ( new Date()).toString() + ")" );
 		if(RunEnvironment.getInstance().isBatch()){
-			double endAt= 4 * 60;	// 8 hours of simulation
+			double endAt= 8 * 60;	// 8 hours of simulation
 			RunEnvironment.getInstance().endAt(endAt);
 		} else {
-			double endAt= 10 * 60;	// 6 hours of simulation
+			double endAt= 10 * 60;	// 10 hours of simulation
 			RunEnvironment.getInstance().endAt(endAt);
 		}
 	}
