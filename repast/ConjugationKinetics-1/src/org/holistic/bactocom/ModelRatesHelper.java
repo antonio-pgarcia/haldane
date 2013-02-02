@@ -38,17 +38,17 @@ public class ModelRatesHelper {
 	
 	public double getRCv(Context context) {
 		Double v= (T - (Cd + Ct))/T; 
-		return( (Double.isNaN(v) ? v : 0) );
+		return( (!Double.isNaN(v) ? v : 0) );
 	}
 	
 	public double getRCh(Context context) {
 		Double v= (Cd + Ct)/T;
-		return( (Double.isNaN(v) ? v : 0) ); 
+		return( (!Double.isNaN(v) ? v : 0) ); 
 	}
 	
 	public double getRCt(Context context) {
 		Double v= Ct/(Cd + Ct); 
-		return( (Double.isNaN(v) ? v : 0) );
+		return( (!Double.isNaN(v) ? v : 0) );
 	}
 	
 	public double getTransconjugantPerRecipientCell(Context context) {
