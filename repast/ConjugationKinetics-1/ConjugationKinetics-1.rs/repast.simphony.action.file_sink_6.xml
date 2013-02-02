@@ -1,0 +1,16 @@
+<repast.simphony.data2.engine.FileSinkDescriptor>
+  <name>Sink:RelativeContribution</name>
+  <dataSet>RelativeContribution</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>tick</string>
+    <string>run</string>
+    <string>random_seed</string>
+    <string>Relative contribution of horizontal transfer</string>
+    <string>Relative contribution of vertical transfer</string>
+    <string>Relative contribution of transconjugants re-transfers</string>
+  </sourceIds>
+  <fileName>output/M1-RelativeContribution.dat</fileName>
+  <addTimeStamp>false</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
