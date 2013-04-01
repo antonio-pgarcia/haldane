@@ -1,0 +1,54 @@
+<repast.simphony.data2.engine.DataSetDescriptor>
+  <name>ConjugationRates</name>
+  <type>AGGREGATE</type>
+  <inclTick>true</inclTick>
+  <inclBatchRun>true</inclBatchRun>
+  <inclRandomSeed>true</inclRandomSeed>
+  <scheduleParams>
+    <start>1.0</start>
+    <interval>10.0</interval>
+    <priority>-Infinity</priority>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+  </scheduleParams>
+  <methodDataSources class="linked-hash-map"/>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map">
+    <entry>
+      <string>Transconjugants per recipient cell</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Transconjugants per recipient cell</id>
+        <dsClassName>org.holistic.bactocom.datasources.CFreqTtoRT</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Gamma end-point (D growth rate)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Gamma end-point (D growth rate)</id>
+        <dsClassName>org.holistic.bactocom.datasources.CFreqEndpointDonor</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Gamma end-point (D+R+T growth rate)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Gamma end-point (D+R+T growth rate)</id>
+        <dsClassName>org.holistic.bactocom.datasources.CFreqEndpoint</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Gamma end-point (T growth rate)</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Gamma end-point (T growth rate)</id>
+        <dsClassName>org.holistic.bactocom.datasources.CFreqEndpointTransconjugant</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Rate (T/(R+T))</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Rate (T/(R+T))</id>
+        <dsClassName>org.holistic.bactocom.datasources.CFreqTtoRT</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+  </customAggDataSources>
+</repast.simphony.data2.engine.DataSetDescriptor>
