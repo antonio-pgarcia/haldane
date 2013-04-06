@@ -1,1 +1,0 @@
-This is the ConjugationKinetics2D-v1 model. Please contact the developers for more information.
