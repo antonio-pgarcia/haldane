@@ -1,0 +1,14 @@
+<repast.simphony.data2.engine.FileSinkDescriptor>
+  <name>Sink:Conjugation-Rates( T/(T+R) )</name>
+  <dataSet>ConjugationRates</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>tick</string>
+    <string>run</string>
+    <string>random_seed</string>
+    <string>Rate (T/(R+T))</string>
+  </sourceIds>
+  <fileName>M1-ConjugationRates.dat</fileName>
+  <addTimeStamp>false</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

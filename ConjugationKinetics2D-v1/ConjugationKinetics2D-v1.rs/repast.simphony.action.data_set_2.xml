@@ -1,0 +1,47 @@
+<repast.simphony.data2.engine.DataSetDescriptor>
+  <name>Growth Rates</name>
+  <type>AGGREGATE</type>
+  <inclTick>true</inclTick>
+  <inclBatchRun>true</inclBatchRun>
+  <inclRandomSeed>true</inclRandomSeed>
+  <scheduleParams>
+    <start>1.0</start>
+    <interval>10.0</interval>
+    <priority>-Infinity</priority>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+  </scheduleParams>
+  <methodDataSources class="linked-hash-map"/>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map">
+    <entry>
+      <string>Population growth rate</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Population growth rate</id>
+        <dsClassName>org.holistic.bactocom.datasources.GrowthRateAll</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Donors growth rate</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Donors growth rate</id>
+        <dsClassName>org.holistic.bactocom.datasources.GrowthRateDonors</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Recipients growth rate</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Recipients growth rate</id>
+        <dsClassName>org.holistic.bactocom.datasources.GrowthRateRecipients</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Transconjugants growth rate</string>
+      <repast.simphony.data2.engine.CustomDataSourceDefinition>
+        <id>Transconjugants growth rate</id>
+        <dsClassName>org.holistic.bactocom.datasources.GrowthRateTransconjugants</dsClassName>
+      </repast.simphony.data2.engine.CustomDataSourceDefinition>
+    </entry>
+  </customAggDataSources>
+</repast.simphony.data2.engine.DataSetDescriptor>
