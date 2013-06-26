@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+					<parameter name="GD" displayName="04. G(D)" type="int" 
+						defaultValue="42" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="randomSeed" displayName="01. Default Random Seed" type="int" 
+						defaultValue="__NULL__"
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="GT" displayName="05. G(T)" type="int" 
+						defaultValue="46" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="pName" displayName="11. Plasmid(name)" type="java.lang.String" 
+						defaultValue="pSim1" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="GR" displayName="03. G(R)" type="int" 
+						defaultValue="43" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="equation" displayName="09. Equation(Experimental)" type="java.lang.String" 
+						defaultValue="y= -0.0247697070010407 + 0.00875911917173572 * x + -2.58749799802607e-05 * x^2 + 2.50042083411124e-08 * x^3" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="TI" displayName="02. Gamma(Intrinsic)" type="double" 
+						defaultValue="0.5" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+				<parameter name="isOnlyOriT" displayName="06. Plasmid(isOnlyOriT)" type="boolean" 
+						defaultValue="false" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter"
+									
+		/>
+				<parameter name="density0" displayName="08. N0(cells/ml) " type="java.lang.String" 
+						defaultValue="5*10^9" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="densityD" displayName="07. Density(Donors) %" type="double" 
+						defaultValue="50.0" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+				<parameter name="fitAuto" displayName="10. Fit using equation" type="boolean" 
+						defaultValue="false" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter"
+									
+		/>
+		</parameters>
+
+

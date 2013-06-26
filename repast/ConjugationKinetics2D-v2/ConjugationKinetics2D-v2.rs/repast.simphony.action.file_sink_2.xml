@@ -1,0 +1,34 @@
+<repast.simphony.data2.engine.FileSinkDescriptor>
+  <name>FS::Model</name>
+  <dataSet>DS::All</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>Time</string>
+    <string>run</string>
+    <string>random_seed</string>
+    <string>gamma0</string>
+    <string>gamma0d</string>
+    <string>gamma0t</string>
+    <string>gammaI</string>
+    <string>Density</string>
+    <string>GammaEp</string>
+    <string>Rate</string>
+    <string>Plasmid</string>
+    <string>TRTexp</string>
+    <string>G</string>
+    <string>Gd</string>
+    <string>Gr</string>
+    <string>Gt</string>
+    <string>N</string>
+    <string>Nd</string>
+    <string>Nr</string>
+    <string>Nt</string>
+    <string>RCh</string>
+    <string>RCv</string>
+    <string>RCt</string>
+    <string>WetLabRateCurve</string>
+  </sourceIds>
+  <fileName>output/ModelOutput.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

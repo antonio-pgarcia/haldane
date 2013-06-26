@@ -1,0 +1,36 @@
+<repast.simphony.chart2.engine.TimeSeriesChartDescriptor>
+  <name>Plot::GammaI</name>
+  <dataSet>DS::All</dataSet>
+  <xAxisLabel>Tick Count</xAxisLabel>
+  <yAxisLabel>(Cd+Ct)/(T+D)</yAxisLabel>
+  <chartTitle>Estimated Gamma(I)</chartTitle>
+  <type>TIME_SERIES</type>
+  <background>
+    <red>192</red>
+    <green>192</green>
+    <blue>192</blue>
+    <alpha>255</alpha>
+  </background>
+  <gridLineColor>
+    <red>255</red>
+    <green>255</green>
+    <blue>255</blue>
+    <alpha>255</alpha>
+  </gridLineColor>
+  <showGrid>true</showGrid>
+  <seriesIds>
+    <entry>
+      <string>gammaI</string>
+      <SeriesData>
+        <label>gammaI</label>
+        <color>
+          <red>255</red>
+          <green>200</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </color>
+      </SeriesData>
+    </entry>
+  </seriesIds>
+  <plotRangeLength>-1</plotRangeLength>
+</repast.simphony.chart2.engine.TimeSeriesChartDescriptor>
