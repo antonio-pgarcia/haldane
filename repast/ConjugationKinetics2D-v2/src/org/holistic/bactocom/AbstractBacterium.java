@@ -211,6 +211,17 @@ public abstract class AbstractBacterium {
 			neighbors.add(b.getId());
 			incEncounters();
 			MyPopulationBookkeeper.getInstance().incrementE();
+			switch(getState()) {
+				case D: {
+					MyPopulationBookkeeper.getInstance().incrementEd();
+					break;
+				}
+				
+				case T: {
+					MyPopulationBookkeeper.getInstance().incrementEt();
+					break;
+				}
+			}
 		}
 	}
 	

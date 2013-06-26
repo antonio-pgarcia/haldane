@@ -18,6 +18,8 @@ public class ModelRatesHelper {
 	private double Gr= 0;
 	
 	private double E= 0;
+	private double Ed= 0;
+	private double Et= 0;
 	private double Nc= 0;
 	private double Cd= 0;
 	private double Ct= 0;
@@ -73,13 +75,17 @@ public class ModelRatesHelper {
 	
 	public double getGamma0D(Context context) {
 		//Double v= Cd/(D+T);
-		Double v= Cd/E;
+		Double v= Cd/Ed;
+		v= v/(D/(D+T));
+		v= v > 1 ? 0 : v;
 		return( (!Double.isNaN(v) ? v : 0) ); 
 	}
 	
 	public double getGamma0T(Context context) {
 		//Double v= Ct/(D+T);
-		Double v= Ct/E;
+		Double v= Ct/Et;
+		v= v/(T/(D+T));
+		v= v > 1 ? 0 : v;
 		return( (!Double.isNaN(v) ? v : 0) ); 
 	}
 	
@@ -230,6 +236,8 @@ public class ModelRatesHelper {
 		R= MyPopulationBookkeeper.getInstance().getR();
 		T= MyPopulationBookkeeper.getInstance().getT();
 		E= MyPopulationBookkeeper.getInstance().getE();
+		Ed= MyPopulationBookkeeper.getInstance().getEd();
+		Et= MyPopulationBookkeeper.getInstance().getEt();
 		Nc= MyPopulationBookkeeper.getInstance().getNc();
 		Cd= MyPopulationBookkeeper.getInstance().getCd();
 		Ct= MyPopulationBookkeeper.getInstance().getCt();

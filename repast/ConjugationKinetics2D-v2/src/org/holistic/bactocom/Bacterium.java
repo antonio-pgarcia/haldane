@@ -193,6 +193,14 @@ public class Bacterium extends AbstractBacterium {
 		return(getState() == State.D || (getState() == State.T && !(Boolean) getParameters().getValue(BacteriumParameters.isOnlyOriT)));
 	}
 	
+	public boolean isDonor() {
+		return(getState() == State.D);
+	}
+	
+	public boolean isConjugativeT() {
+		return((getState() == State.T && !(Boolean) getParameters().getValue(BacteriumParameters.isOnlyOriT)));
+	}
+	
 	public double getTime() {
 		double v= RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
 		return v;
@@ -237,6 +245,25 @@ public class Bacterium extends AbstractBacterium {
 	
 			if(getGammaL() > getZGamma()) return;
 			//if( getDelta() < (getZg() * 0.7) ) return;
+			if(isGreaterThanExperimental()) return;
+			b.setState(State.T);
+			updateConjugations();
+		}
+	}
+	
+	/**
+	 * The basic decision rule to which a minimum cell cycle has been added.
+	 * 
+	 */
+	public void procConjugation2() {
+
+		if(isConjugativeHost() ) {
+			Bacterium b= pickRandomNeighbor(State.R);
+			if(b == null) return;
+			updateEncounters(b);
+	
+			
+			if(isDonor() && getGammaL() > getZGamma()) return;
 			if(isGreaterThanExperimental()) return;
 			b.setState(State.T);
 			updateConjugations();

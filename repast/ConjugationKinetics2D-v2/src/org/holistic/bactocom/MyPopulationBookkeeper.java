@@ -10,6 +10,8 @@ public class MyPopulationBookkeeper {
 	private AtomicInteger R;
 	private AtomicInteger T;
 	private AtomicInteger E;		// Number of D|T to R Encounters
+	private AtomicInteger Ed;		// Number of D|T to R Encounters
+	private AtomicInteger Et;		// Number of D|T to R Encounters
 	private AtomicInteger Nc;		// Number of cells which have conjugated
 	private AtomicInteger Cd;		// Conjugative transfers performed by Donor cells
 	private AtomicInteger Ct;		// Conjugative transfers performed by Transconjugant cells
@@ -23,6 +25,8 @@ public class MyPopulationBookkeeper {
 		R= new AtomicInteger(0);
 		T= new AtomicInteger(0);
 		E= new AtomicInteger(0);
+		Ed= new AtomicInteger(0);
+		Et= new AtomicInteger(0);
 		Nc= new AtomicInteger(0);
 		Cd= new AtomicInteger(0);
 		Ct= new AtomicInteger(0);
@@ -37,6 +41,8 @@ public class MyPopulationBookkeeper {
 		R.set(0);
 		T.set(0);
 		E.set(0);
+		Ed.set(0);
+		Et.set(0);
 		Nc.set(0);
 		Cd.set(0);
 		Ct.set(0);
@@ -136,6 +142,30 @@ public class MyPopulationBookkeeper {
 	
 	public void decrementE() {
 		E.decrementAndGet();
+	}
+	
+	public double getEd() {
+		return (double) Ed.get() * MyParameters.N_SCALEFACTOR;
+	}
+
+	public void incrementEd() {
+		Ed.incrementAndGet();
+	}
+	
+	public void decrementEd() {
+		Ed.decrementAndGet();
+	}
+	
+	public double getEt() {
+		return (double) Et.get() * MyParameters.N_SCALEFACTOR;
+	}
+
+	public void incrementEt() {
+		Et.incrementAndGet();
+	}
+	
+	public void decrementEt() {
+		Et.decrementAndGet();
 	}
 	
 	/**
