@@ -76,16 +76,12 @@ public class ModelRatesHelper {
 	public double getGamma0D(Context context) {
 		//Double v= Cd/(D+T);
 		Double v= Cd/Ed;
-		v= v/(D/(D+T));
-		v= v > 1 ? 0 : v;
 		return( (!Double.isNaN(v) ? v : 0) ); 
 	}
 	
 	public double getGamma0T(Context context) {
 		//Double v= Ct/(D+T);
 		Double v= Ct/Et;
-		v= v/(T/(D+T));
-		v= v > 1 ? 0 : v;
 		return( (!Double.isNaN(v) ? v : 0) ); 
 	}
 	

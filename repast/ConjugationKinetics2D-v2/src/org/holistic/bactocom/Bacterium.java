@@ -414,7 +414,7 @@ public class Bacterium extends AbstractBacterium {
 	public double getLength() {
 		double t= RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
 		double delta= t - t0;
-		double l= BacteriumEquations.eqnSimpleLinearFit(delta, getZg(), BacteriumParameters.MIN_LENGTH, BacteriumParameters.MAX_LENGTH);
+		double l= BacteriumEquations.eqnSimpleLinearFit(delta, getZg(), BacteriumParameters.MIN_LENGTH/2, BacteriumParameters.MAX_LENGTH/2);
 		return l;
 	}
 	
