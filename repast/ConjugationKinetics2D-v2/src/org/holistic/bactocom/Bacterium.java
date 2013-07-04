@@ -35,11 +35,13 @@ public class Bacterium extends AbstractBacterium {
 	private double G= 0;						
 	private double Zg;							// The generation time random variable
 	private double Gc;							// Estimated point of cell cycle for division
+	private int EEX= 0;							// Entry Exclusion generations settlement 						
 	
 	// Random generators
 	private Poisson P= null;
 	private Normal Z= null;
 	private Normal ZGamma= null;
+	private Uniform U= null;
 	
 	// Parameters 
 	private double gamma0= 0;
@@ -91,13 +93,14 @@ public class Bacterium extends AbstractBacterium {
 		Z= (Normal) RandomHelper.getDistribution(MyParameters.RANDOM_DIVISION);
 		ZGamma= (Normal) RandomHelper.getDistribution(MyParameters.RANDOM_GAMMA0);
 		P= (Poisson) RandomHelper.getDistribution(MyParameters.RANDOM_CONJUGATION);
+		U= (Uniform) RandomHelper.getDistribution(MyParameters.RANDOM_UNIFORM1);
+		
 		//Zg= BacteriumEquations.eqnZ(G, G * 0.35D, Z.nextDouble());
 		Zg= BacteriumEquations.eqnZ(G, G * 0.25D, Z.nextDouble());
 	}
 	
 	public double getGc() {
-		double U= RandomHelper.getDistribution(MyParameters.RANDOM_TIME2CONJUGATE).nextDouble();
-		Gc= Zg * U;
+		Gc= Zg * U.nextDouble();
 		return Gc;
 	}
 	
@@ -133,13 +136,24 @@ public class Bacterium extends AbstractBacterium {
 	public void procLag() {
 		double t= RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
 		//double delta= t - t0;
-		double U= RandomHelper.getDistribution(MyParameters.RANDOM_TIME2CONJUGATE).nextDouble();
 		
 		double lag= BacteriumEquations.getLagFromG(G);
-		U= (1 + (lag - 1)) * U;
-		if( t <  U ) {
+		double u= (1 + (lag - 1)) * U.nextDouble();
+		if( t <  u ) {
 			t0= t;
 		}
+	}
+	
+	public void initEeX() {
+		EEX= (int) ( (2 + (5 - 2)) * U.nextDouble() ); 
+	}
+	
+	public int getEeX() {
+		return EEX;
+	}
+	
+	public void setEeX(int v) {
+		EEX= v;
 	}
 	
 	/**
@@ -266,6 +280,23 @@ public class Bacterium extends AbstractBacterium {
 			if(isDonor() && getGammaL() > getZGamma()) return;
 			if(isGreaterThanExperimental()) return;
 			b.setState(State.T);
+			b.initEeX();
+			updateConjugations();
+		}
+	}
+	
+	
+	public void procSuperInfection() {
+		if(isConjugativeHost()) {
+			if(getConjugations() > 3) return; 
+			Bacterium b= pickRandomNeighbor(State.T);
+			if(b == null) return;
+			if(b.getEeX() <= 0) return;
+			updateEncounters(b);
+			if(isDonor() && getGammaL() > getZGamma()) return;
+			//if(isGreaterThanExperimental()) return;
+			b.setState(State.T);
+			//System.out.println("Superinfections:: " + b.getEeX() + " C:: " + getConjugations());
 			updateConjugations();
 		}
 	}
@@ -527,7 +558,9 @@ public class Bacterium extends AbstractBacterium {
 	 * @return daughter A new Bacterium instance
 	 */
 	private Bacterium getDaughter() {
+		EEX--;
 		Bacterium daughter= new Bacterium(getState(), getParameters(), getGenotype());
+		daughter.setEeX(getEeX());
 		return daughter;
 	}
 	
@@ -577,7 +610,13 @@ public class Bacterium extends AbstractBacterium {
 	@ScheduledMethod(start=1,interval=1,shuffle=true)
 	public void stepConjugation() {
 		if(isStarved()) return;
-		procConjugation1();
+		procConjugation2();
+	}
+	
+	@ScheduledMethod(start=1,interval=1,shuffle=true)
+	public void stepSuperInfection() {
+		if(isStarved()) return;
+		procSuperInfection();
 	}
 
 }

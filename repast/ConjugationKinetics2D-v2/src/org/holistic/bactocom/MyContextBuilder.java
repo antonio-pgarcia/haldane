@@ -84,7 +84,7 @@ public class MyContextBuilder implements ContextBuilder<Object> {
 		RandomHelper.registerDistribution(MyParameters.RANDOM_GAMMA0, (Normal) RandomHelper.createNormal(0, 1));
 		RandomHelper.registerDistribution(MyParameters.RANDOM_NEIGHBORHOOD, (Uniform) RandomHelper.createUniform());
 		RandomHelper.registerDistribution(MyParameters.RANDOM_CONJUGATION, (Poisson) RandomHelper.createPoisson(MyParameters.getIntrinsicConjugationRate()));
-		RandomHelper.registerDistribution(MyParameters.RANDOM_TIME2CONJUGATE, (Uniform) RandomHelper.createUniform());
+		RandomHelper.registerDistribution(MyParameters.RANDOM_UNIFORM1, (Uniform) RandomHelper.createUniform());
 	}
 	
 	/**

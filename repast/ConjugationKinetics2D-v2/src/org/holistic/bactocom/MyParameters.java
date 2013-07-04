@@ -13,7 +13,7 @@ public class MyParameters {
 	public static String RANDOM_GAMMA0= "Gamma0Normal";
 	public static String RANDOM_NEIGHBORHOOD= "NeighborhoodUniform";
 	public static String RANDOM_CONJUGATION= "ConjugationUniform";
-	public static String RANDOM_TIME2CONJUGATE= "ConjugationUniformTime";
+	public static String RANDOM_UNIFORM1= "UniformValues1";
 	
 	public static String VL_NUTRIENTS= "Nutrients";				// Value Layer nutrient key
 	
@@ -115,7 +115,7 @@ public class MyParameters {
 	}
 	
 	public static int getNutrient() {
-		return (Integer) 2; //4 p 3,6
+		return (Integer) 3; //4 p 3,6
 	}
 	
 	/**
