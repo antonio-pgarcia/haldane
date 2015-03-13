@@ -18,7 +18,7 @@ Our work is mainly focused on *in silico* simulation of computational biology an
 <hr>
 <font size="4" color="gray" face="verdana">
 <p align="justify">
-The datasets containing the simulation output for papers sent to <a href=http://www.pacbb.net/>[PACBB]</a> (_A preliminary assessment of three strategies for the agent-based modeling of bacterial conjugation_) and to <a href=http://www.paams.net/> [PAAMS]</a> (_`BactoSim` - An individual-based simulation environment for bacterial conjugation_) 2015 congress can found on the following link <a href=http://goo.gl/kpoc8w>Simulation datasets</a>. The software version which has been used for produce these results will be made available soon.
+The datasets containing the simulation output for papers sent to <a href=http://www.pacbb.net/>[PACBB]</a> (<i>A preliminary assessment of three strategies for the agent-based modeling of bacterial conjugation</i>) and to <a href=http://www.paams.net/> [PAAMS]</a> (<i> BactoSim --- An individual-based simulation environment for bacterial conjugation</i>) 2015 congress can found on the following link <a href=http://goo.gl/kpoc8w>Simulation datasets</a>. The software version which has been used for produce these results will be made available soon.
 </p>
 
 <p align="justify">
