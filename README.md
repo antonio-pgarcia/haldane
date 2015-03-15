@@ -2,17 +2,16 @@
 <br><br>
 <font size="6" color="gray" face="verdana">Front Matter</font>
 <hr>
-<font size="5" color="gray" face="verdana">
+
 <p align="justify">
-The project name *Haldane* is not an acronym, it's just a tribute to  J.B.S. Haldane [1], who was amongst other things, a distinguished geneticist, evolutionary biologist and an open minded and a true human being.  
+<font size="5" color="gray" face="verdana">
+The project name <b>Haldane</b> is not an acronym, it's just a tribute to  J.B.S. Haldane [1], who was amongst other things, a distinguished geneticist, evolutionary biologist and an open minded and a true human being.  
+</font>
 </p>
 
 <p align="justify">
 Our work is mainly focused on *in silico* simulation of computational biology and ecology of bacterial conjugation using spatially explicit individual-based or agent based models models.
 </p>
-
-</font>
-<br><br><br>
 
 <font size="6" color="gray" face="verdana">News</font>
 <hr>
