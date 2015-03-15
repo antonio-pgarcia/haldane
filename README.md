@@ -1,5 +1,13 @@
-<font size="20" color="#006699" face="verdana"><p align="right">_Haldane_ Computational Biology</p></font>
-<br><br>
+
+
+<h2>
+<p align="right">
+<i>Haldane</i> Computational Biology
+</p>
+</h2>
+
+<br>
+
 <font size="6" color="gray" face="verdana">Front Matter</font>
 <hr>
 
@@ -10,7 +18,7 @@ The project name <b>Haldane</b> is not an acronym, it's just a tribute to  J.B.S
 </p>
 
 <p align="justify">
-Our work is mainly focused on *in silico* simulation of computational biology and ecology of bacterial conjugation using spatially explicit individual-based or agent based models models.
+Our work is mainly focused on <b>in silico</b> simulation of computational biology and ecology of bacterial conjugation using spatially explicit individual-based or agent based models models.
 </p>
 
 <font size="6" color="gray" face="verdana">News</font>
